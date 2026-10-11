@@ -111,3 +111,19 @@ window.addEventListener("resize", () => {
   scrollAnterior = Math.max(0, window.scrollY);
   mostrarEncabezado();
 });
+// MOVIMIENTO DE LA FRANJA
+
+const franjaMovimiento = document.querySelector(".franja-movimiento");
+const reducirMovimiento = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+);
+
+function actualizarFranja() {
+  franjaMovimiento.classList.toggle(
+    "animada",
+    !reducirMovimiento.matches
+  );
+}
+
+reducirMovimiento.addEventListener("change", actualizarFranja);
+actualizarFranja();
