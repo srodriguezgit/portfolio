@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Santiago Rodriguez | Diseño y desarrollo web</title>
+
+  <meta
+    name="description"
+    content="Diseño y desarrollo de páginas web para profesionales y negocios. Conocé mis proyectos y conversemos sobre tu próxima web."
+  >
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <header class="encabezado">
+    <nav class="contenedor navegacion" aria-label="Navegación principal">
+      <a class="marca" href="#inicio" aria-label="Santiago Rodriguez, inicio">
+        sr<span>.</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="menu"
+        hidden
+      >
+        Menú
+      </button>
+
+      <ul id="menu" class="menu">
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a class="nav-contacto" href="#contacto">Hablemos ↗︎</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="inicio contenedor" id="inicio">
+      <p class="etiqueta">SANTIAGO RODRIGUEZ / DESARROLLO WEB</p>
+
+      <h1>Tu negocio merece<br>una web que lo<br><span>represente.</span></h1>
+
+      <div class="inicio-inferior">
+        <p class="introduccion">
+          Diseño y desarrollo páginas claras, modernas y fáciles
+          de usar para profesionales y negocios.
+        </p>
+
+        <div class="acciones">
+          <a class="boton" href="#proyectos">Ver proyectos ↘</a>
+          <a class="enlace" href="#contacto">Contame tu idea ↗︎</a>
+        </div>
+      </div>
+
+      <div class="inicio-pie">
+        <span>Buenos Aires, Argentina</span>
+        <span>Diseño + Código + Atención al detalle</span>
+      </div>
+    </section>
+
+    <section class="seccion proyectos" id="proyectos">
+      <div class="contenedor">
+        <div class="cabecera-seccion">
+          <div>
+            <p class="etiqueta">01 / PROYECTOS SELECCIONADOS</p>
+            <h2>De la idea<br>a la pantalla.</h2>
+          </div>
+          <p class="texto-apoyo">
+            Dos proyectos demostrativos para explorar
+            distintas identidades y formas de presentar un negocio.
+          </p>
+        </div>
+
+        <article class="proyecto">
+          <a
+            class="proyecto-imagen fondo-rivas"
+            href="https://srodriguezgit.github.io/estudio-contable/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visitar demo de Rivas y Asociados, abre otra pestaña"
+          >
+            <img
+              src="assets/images/rivas.png"
+              alt="Inicio de la web de Rivas y Asociados"
+              width="1440"
+              height="900"
+              loading="lazy"
+            >
+          </a>
+
+          <div class="proyecto-info">
+            <div>
+              <p class="etiqueta">ESTUDIO CONTABLE / DEMO</p>
+              <h3>Rivas & Asociados</h3>
+              <p>
+                Una presentación sobria que organiza los servicios
+                y facilita el recorrido hacia el contacto.
+              </p>
+              <ul class="etiquetas" aria-label="Características">
+                <li>Diseño adaptable</li>
+                <li>Servicios</li>
+                <li>Preguntas frecuentes</li>
+              </ul>
+            </div>
+
+            <a
+              class="enlace"
+              href="https://srodriguezgit.github.io/estudio-contable/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visitar demo ↗︎
+            </a>
+          </div>
+        </article>
+
+        <article class="proyecto">
+          <a
+            class="proyecto-imagen fondo-faggiano"
+            href="https://srodriguezgit.github.io/faggiano-legal/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visitar demo de Faggiano Legal, abre otra pestaña"
+          >
+            <img
+              src="assets/images/faggiano.png"
+              alt="Inicio de la web de Faggiano Legal"
+              width="1440"
+              height="900"
+              loading="lazy"
+            >
+          </a>
+
+          <div class="proyecto-info">
+            <div>
+              <p class="etiqueta">ESTUDIO JURÍDICO / DEMO</p>
+              <h3>Faggiano Legal</h3>
+              <p>
+                Una identidad editorial con especialidades interactivas
+                y un orientador que prepara la consulta por WhatsApp.
+              </p>
+              <ul class="etiquetas" aria-label="Características">
+                <li>Diseño adaptable</li>
+                <li>Orientador interactivo</li>
+                <li>WhatsApp</li>
+              </ul>
+            </div>
+
+            <a
+              class="enlace"
+              href="https://srodriguezgit.github.io/faggiano-legal/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visitar demo ↗︎
+            </a>
+          </div>
+        </article>
+
+        <p class="nota">
+          Ambos proyectos representan estudios ficticios.
+          Son muestras de diseño y desarrollo, no trabajos para clientes reales.
+        </p>
+      </div>
+    </section>
+
+    <section class="seccion contenedor" id="servicios">
+      <div class="cabecera-seccion">
+        <div>
+          <p class="etiqueta">02 / QUÉ PUEDO HACER POR VOS</p>
+          <h2>Una web con<br>un objetivo claro.</h2>
+        </div>
+        <p class="texto-apoyo">
+          Definimos qué necesitás comunicar y qué querés
+          que haga una persona cuando visite tu página.
+        </p>
+      </div>
+
+      <div class="servicios-grid">
+        <article class="servicio">
+          <span class="numero">01</span>
+          <h3>Web institucional</h3>
+          <p>
+            Presentá tu negocio, tus servicios y tu forma de trabajar
+            en un sitio con identidad propia.
+          </p>
+          <p class="servicio-detalle">Profesionales · Estudios · Negocios</p>
+        </article>
+
+        <article class="servicio">
+          <span class="numero">02</span>
+          <h3>Landing page</h3>
+          <p>
+            Una página centrada en una propuesta, un evento
+            o un servicio, con un recorrido directo hacia la consulta.
+          </p>
+          <p class="servicio-detalle">Lanzamientos · Campañas · Eventos</p>
+        </article>
+
+        <article class="servicio">
+          <span class="numero">03</span>
+          <h3>Mejoras y renovación</h3>
+          <p>
+            Revisamos tu web actual y definimos mejoras
+            en presentación, navegación y experiencia móvil.
+          </p>
+          <p class="servicio-detalle">Diseño · Contenido · Usabilidad</p>
+        </article>
+      </div>
+
+      <div class="incluye">
+        <strong>La base de cada proyecto</strong>
+        <p>
+          Adaptación a celulares, navegación clara, enlaces de contacto
+          y configuración básica de títulos y descripciones.
+          El alcance final se acuerda en la propuesta.
+        </p>
+      </div>
+    </section>
+
+    <section class="proceso seccion">
+      <div class="contenedor">
+        <p class="etiqueta">03 / CÓMO TRABAJAMOS</p>
+        <h2>De a pasos.<br>Con vos en el proceso.</h2>
+
+        <div class="pasos">
+          <article>
+            <span class="numero">01 / CONVERSAMOS</span>
+            <h3>Entender tu idea</h3>
+            <p>Conocemos tu negocio, tu público y lo que necesitás de la web.</p>
+          </article>
+
+          <article>
+            <span class="numero">02 / DEFINIMOS</span>
+            <h3>Acordar el alcance</h3>
+            <p>Te presento una propuesta con secciones, tareas, plazos y presupuesto.</p>
+          </article>
+
+          <article>
+            <span class="numero">03 / CONSTRUIMOS</span>
+            <h3>Dar forma al sitio</h3>
+            <p>Desarrollo la página y revisamos juntos el diseño y el contenido.</p>
+          </article>
+
+          <article>
+            <span class="numero">04 / PUBLICAMOS</span>
+            <h3>Salir a la web</h3>
+            <p>Probamos la versión final y coordinamos su publicación y entrega.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion contenedor sobre-mi" id="sobre-mi">
+      <div>
+        <p class="etiqueta">04 / QUIÉN ESTÁ DETRÁS</p>
+        <h2>Soy Santiago.<br>Me gusta hacer<br>que las cosas <span>funcionen.</span></h2>
+      </div>
+
+      <div class="sobre-texto">
+        <p>
+          Estudio Ingeniería en Sistemas de Información en la UTN Buenos Aires
+          y desarrollo proyectos que combinan diseño y programación.
+        </p>
+        <p>
+          También trabajo en la administración de un negocio familiar.
+          Esa experiencia me ayuda a pensar una web desde las necesidades
+          de quien la usa y de quien lleva adelante el negocio.
+        </p>
+        <p>
+          Mi propuesta es trabajar con comunicación directa,
+          un alcance definido y atención a los detalles.
+        </p>
+
+        <a
+          class="enlace"
+          href="https://github.com/srodriguezgit"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Ver mi GitHub ↗︎
+        </a>
+      </div>
+    </section>
+
+    <section class="contacto" id="contacto">
+      <div class="contenedor contacto-interior">
+        <p class="etiqueta">05 / TU PRÓXIMO PROYECTO</p>
+        <h2>¿Lo hacemos<br><span>realidad?</span></h2>
+        <p>
+          Contame a qué te dedicás y qué te gustaría lograr con tu web.
+          Podemos empezar por una conversación.
+        </p>
+
+        <a
+          class="boton boton-claro"
+          href="https://wa.me/5491176004462?text=Hola%20Santiago%2C%20vi%20tu%20portfolio%20y%20quisiera%20consultarte%20por%20una%20pagina%20web."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Hablemos por WhatsApp ↗︎
+        </a>
+
+        <p class="contacto-nota">
+          El enlace abre WhatsApp. Podés editar el mensaje antes de enviarlo.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie contenedor">
+    <p>© <span id="anio">2026</span> Santiago Rodriguez</p>
+    <a href="#inicio">Volver al inicio ↑</a>
+  </footer>
+</body>
+</html>
