@@ -675,3 +675,398 @@ h1 span, .sobre-mi h2 span { color: var(--azul); }
     margin-inline: 8px;
   }
 }
+
+/* Qué incluye la web */
+
+.entrega-web {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 32px 48px;
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid var(--linea);
+}
+
+.entrega-intro .etiqueta {
+  margin-bottom: 16px;
+}
+
+.entrega-intro h3 {
+  margin-bottom: 14px;
+}
+
+.entrega-intro > p:not(.etiqueta) {
+  margin: 0;
+  color: var(--gris);
+  font-size: 14px;
+}
+
+.entrega-lista {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.entrega-lista li {
+  padding-top: 16px;
+  border-top: 2px solid var(--azul);
+}
+
+.entrega-lista strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.entrega-lista span {
+  display: block;
+  color: var(--gris);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.entrega-nota {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--gris);
+  font-size: 12px;
+}
+
+/* Preguntas frecuentes */
+
+.preguntas {
+  background: #edf0f6;
+}
+
+.preguntas-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  align-items: start;
+  gap: 64px;
+}
+
+.preguntas-intro > p:not(.etiqueta) {
+  max-width: 360px;
+  margin: 24px 0 12px;
+  color: var(--gris);
+  font-size: 15px;
+}
+
+.preguntas-lista {
+  border-top: 1px solid var(--linea);
+}
+
+.pregunta {
+  border-bottom: 1px solid var(--linea);
+}
+
+.pregunta summary {
+  position: relative;
+  padding: 23px 36px 23px 0;
+  list-style: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.pregunta summary::-webkit-details-marker {
+  display: none;
+}
+
+.pregunta summary::after {
+  content: "";
+  position: absolute;
+  top: 29px;
+  right: 5px;
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid var(--azul);
+  border-bottom: 2px solid var(--azul);
+  transform: rotate(45deg);
+}
+
+.pregunta[open] summary {
+  color: var(--azul);
+}
+
+.pregunta[open] summary::after {
+  top: 34px;
+  transform: rotate(225deg);
+}
+
+.pregunta-respuesta {
+  padding: 0 28px 24px 0;
+}
+
+.pregunta-respuesta p {
+  margin: 0;
+  color: var(--gris);
+  font-size: 14px;
+}
+
+@media (max-width: 960px) {
+  .entrega-web,
+  .preguntas-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .preguntas-intro > p:not(.etiqueta) {
+    max-width: 540px;
+  }
+}
+
+@media (max-width: 600px) {
+  .entrega-lista {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .entrega-web {
+    margin-top: 32px;
+    padding-top: 28px;
+  }
+}
+
+/* Interacción de las preguntas frecuentes */
+
+@media (prefers-reduced-motion: no-preference) {
+  .pregunta summary {
+    transition:
+      color 180ms ease,
+      background-color 180ms ease;
+  }
+
+  .pregunta summary::after {
+    transition: transform 180ms ease;
+  }
+}
+
+/* Efecto al pasar el cursor */
+@media (hover: hover) {
+  .pregunta summary:hover {
+    color: var(--azul);
+    background-color: rgb(41 77 227 / 5%);
+  }
+}
+
+/* Mismo resaltado al navegar con teclado */
+.pregunta summary:focus-visible {
+  color: var(--azul);
+  background-color: rgb(41 77 227 / 5%);
+}
+
+/* Centrar la flecha y suavizar su giro */
+.pregunta summary::after {
+  top: 50%;
+  transform: translateY(-70%) rotate(45deg);
+}
+
+.pregunta[open] summary::after {
+  top: 50%;
+  transform: translateY(-30%) rotate(225deg);
+}
+
+/* Espacio interior de las preguntas */
+.pregunta summary {
+  padding-left: 16px;
+  padding-right: 48px;
+}
+
+.pregunta summary::after {
+  right: 18px;
+}
+
+.pregunta-respuesta {
+  padding-left: 16px;
+  padding-right: 48px;
+}
+
+/* Qué incluye: distribución limpia, sin rayas */
+.entrega-lista {
+  gap: 32px 40px;
+}
+
+.entrega-lista li {
+  border-top: none;
+  padding-top: 0;
+}
+
+.entrega-lista strong {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 600px) {
+  .entrega-lista {
+    gap: 24px;
+  }
+}
+
+/* Panel de prestaciones incluidas */
+
+.entrega-web.entrega-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.7fr);
+  gap: 0;
+  margin-top: 48px;
+  padding: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--linea);
+  border-radius: 20px;
+  box-shadow: 0 12px 36px rgb(23 28 43 / 4%);
+}
+
+/* Presentación: bloque de color */
+.entrega-panel .entrega-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 32px;
+  background: var(--azul);
+  color: #fff;
+}
+
+.entrega-panel .entrega-intro .etiqueta {
+  margin-bottom: 24px;
+  color: #e0e6ff;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+
+.entrega-panel .entrega-intro h3 {
+  max-width: 280px;
+  margin: 0 0 20px;
+  font-size: clamp(30px, 3vw, 40px);
+  line-height: 1.12;
+  letter-spacing: -1.4px;
+  text-wrap: balance;
+}
+
+.entrega-panel .entrega-intro > p:not(.etiqueta) {
+  max-width: 300px;
+  margin: 0;
+  color: #eef1ff;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Prestaciones: una lista integrada */
+.entrega-panel .entrega-lista {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: center;
+  gap: 32px 28px;
+  margin: 0;
+  padding: 40px 32px;
+  list-style: none;
+}
+
+.entrega-panel .entrega-lista li {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  padding: 0 0 0 34px;
+  border: 0;
+}
+
+/* Disco suave */
+.entrega-panel .entrega-lista li::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: #edf1ff;
+}
+
+/* Marca de verificación */
+.entrega-panel .entrega-lista li::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 8px;
+  width: 5px;
+  height: 9px;
+  border: solid var(--azul);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.entrega-panel .entrega-lista strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--texto);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.entrega-panel .entrega-lista span {
+  display: block;
+  color: var(--gris);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Aclaración integrada al pie del panel */
+.entrega-panel .entrega-nota {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 18px 32px;
+  background: #f1f3f9;
+  color: var(--gris);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* Tablet */
+@media (max-width: 960px) {
+  .entrega-web.entrega-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .entrega-panel .entrega-intro {
+    padding: 32px;
+  }
+
+  .entrega-panel .entrega-intro h3 {
+    max-width: none;
+  }
+
+  .entrega-panel .entrega-intro > p:not(.etiqueta) {
+    max-width: 520px;
+  }
+}
+
+/* Celular */
+@media (max-width: 600px) {
+  .entrega-web.entrega-panel {
+    margin-top: 32px;
+    border-radius: 16px;
+  }
+
+  .entrega-panel .entrega-intro {
+    padding: 28px 24px;
+  }
+
+  .entrega-panel .entrega-intro .etiqueta {
+    margin-bottom: 18px;
+  }
+
+  .entrega-panel .entrega-lista {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 28px 24px;
+  }
+
+  .entrega-panel .entrega-nota {
+    padding: 18px 24px;
+  }
+}
