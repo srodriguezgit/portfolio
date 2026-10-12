@@ -1070,3 +1070,21 @@ h1 span, .sobre-mi h2 span { color: var(--azul); }
     padding: 18px 24px;
   }
 }
+
+/* Respuesta visual al tocar en pantallas táctiles */
+@media (hover: none) {
+  .pregunta summary:active {
+    color: var(--azul);
+    background-color: rgb(41 77 227 / 10%);
+  }
+
+  .boton:active {
+    opacity: 0.85;
+  }
+}
+
+/* Mantener resaltada la pregunta abierta */
+.pregunta[open] summary {
+  color: var(--azul);
+  background-color: rgb(41 77 227 / 5%);
+}
