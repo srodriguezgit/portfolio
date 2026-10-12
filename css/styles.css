@@ -1088,3 +1088,22 @@ h1 span, .sobre-mi h2 span { color: var(--azul); }
   color: var(--azul);
   background-color: rgb(41 77 227 / 5%);
 }
+
+/* Resaltado celeste al tocar o abrir una pregunta */
+.pregunta summary {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.pregunta summary:active,
+.pregunta summary:focus-visible,
+.pregunta[open] summary {
+  background-color: #dce8ff;
+  color: var(--azul);
+}
+
+@media (hover: hover) {
+  .pregunta summary:hover {
+    background-color: #dce8ff;
+    color: var(--azul);
+  }
+}
