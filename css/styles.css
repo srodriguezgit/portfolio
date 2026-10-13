@@ -1107,3 +1107,7 @@ h1 span, .sobre-mi h2 span { color: var(--azul); }
     color: var(--azul);
   }
 }
+
+.fondo-alma {
+  background-color: #dce5da;
+}
