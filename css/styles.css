@@ -1112,16 +1112,39 @@ h1 span, .sobre-mi h2 span { color: var(--azul); }
   background-color: #dce5da;
 }
 
-.fondo-giro {
+.proyecto-imagen.fondo-giro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: auto;
+  overflow: hidden;
   background: #081b29;
 }
 
-.fondo-giro img {
+.proyecto-imagen.fondo-giro img {
+  position: static;
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: none;
+  aspect-ratio: auto;
   object-fit: contain;
-  object-position: center;
+  background: transparent;
+  border-radius: 12px;
+  transform: none;
+}
+
+.proyecto-imagen.fondo-giro:hover img {
+  transform: none;
+}
+
+@media (max-width: 600px) {
+  .proyecto-imagen.fondo-giro {
+    padding: 12px;
+  }
 }
 
 .giro-tecnologias {
